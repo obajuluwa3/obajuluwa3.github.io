@@ -1,0 +1,96 @@
+/** {
+	border: 2px solid grey;
+}*/
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 50px;
+	align-items: center;
+}
+
+#levelBoard {
+	text-align: center;
+	padding-left: 50px;
+}
+
+#scoreBoard {
+	text-align: center;
+	padding-right: 50px;
+}
+
+.title {
+	margin: 0 70px;
+	text-align: center;
+}
+
+#messageBoard {
+	text-align: center;
+}
+
+#mainSection {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#cardTable {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+.playingCard {
+	width: 175px;
+	margin: 50px 15px;
+	position: relative;
+	-webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+
+.cardBack {
+	width: 175px;
+	margin: 50px 15px;
+	position: relative;
+}
+
+.cardBackWrapper {
+	display: none;
+}
+
+.flipped .cardBack {
+	-webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.cardFrontWrapper {
+	-webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
+
+.flipped .playingCard {
+	-webkit-transform: rotateY(0);
+    transform: rotateY(0);
+}
+
+.shuffle {
+	display: flex;
+	justify-content: center;
+}
+
+#infoSection {
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+#messages {
+	height: 40px;
+}
+
+#messages span {
+	color: red;
+}

@@ -6,7 +6,13 @@ var startTable = $("#cardTable").clone();
 var startMsgBoard = $("#messages").clone();
 var clickedOnce = false
 var clickToReset = false;
-var speedTracker = 850;
+var shuffleSpeed = 850;
+var shuffleTimes = 10
+var footer
+var wagerAmount = $("#wagerAmt").text();
+var score = $("#score").text()
+var round = 1
+$("#startOver2").css("display", "none")
 
 
 // Randomly choose which cards to swap
@@ -25,7 +31,7 @@ var shuffle = function() {
 		console.log("Switch End Cards")
 		switchEndCards();
 	}
-	if (shuffleCount === 10) {
+	if (shuffleCount === shuffleTimes) {
     	stopTime();
     	$("#messages").text("Click one of the cards to find the Queen of Hearts!")
     	cards = document.querySelectorAll(".wholeCard");
@@ -43,9 +49,9 @@ var switchLeftCards = function() {
 	var card2 = $("#back2 .cardBack");
 	var front1 = $("#card1Wrapper .playingCard")
 	var front2 = $("#card2Wrapper .playingCard")
-	card1.animate({left: '205px'},200, function() {
+	card1.animate({left: '205px'}, 200, function() {
 	});
-	card2.animate({left: '-205px'},200, function(){
+	card2.animate({left: '-205px'}, 200, function(){
 		$("#back2").append(card1);
 		$("#card2Wrapper").append(front1);
 		$(card1).css("left", "0");
@@ -61,9 +67,9 @@ var switchRightCards = function() {
 	var card3 = $("#back3 .cardBack");
 	var front2 = $("#card2Wrapper .playingCard")
 	var front3 = $("#card3Wrapper .playingCard")
-	card2.animate({left: '205px'},200, function() {
+	card2.animate({left: '205px'}, 200, function() {
 	});
-	card3.animate({left: '-205px'},200, function() {
+	card3.animate({left: '-205px'}, 200, function() {
 		$("#back3").append(card2);
 		$("#card3Wrapper").append(front2);
 		$(card2).css("left", "0");
@@ -79,9 +85,9 @@ var switchEndCards = function() {
 	var card3 = $("#back3 .cardBack");
 	var front1 = $("#card1Wrapper .playingCard")
 	var front3 = $("#card3Wrapper .playingCard")
-	card1.animate({left: '405px'},200, function() {
+	card1.animate({left: '405px'}, 200, function() {
 	});
-	card3.animate({left: '-405px'},200, function() {
+	card3.animate({left: '-405px'}, 200, function() {
 		$("#back3").append(card1);
 		$("#card3Wrapper").append(front1);
 		$(card1).css("left", "0");
@@ -97,9 +103,10 @@ var stopTime = function() {
 }
 
 $("#shuffleBtn").click(function(){
+	$("#footer").css("display", "none")
     $(".cardBackWrapper").css("display", "block");
     $(".cardFrontWrapper").css("display", "none");
-    shuffleTimer = setInterval(function(){shuffle()}, speedTracker)
+    shuffleTimer = setInterval(function(){shuffle()}, shuffleSpeed)
     $(this).attr("disabled", "true");
     $("#messages").text("Shuffling...")
 });
@@ -127,22 +134,34 @@ var clickListener = function(card) {
 		  	clicked = $(event.target);
 		  	if (clickedOnce === false) {
 		  		if (clicked.parent().parent().index() !== targetCard.parent().parent().index()) {
-			  		console.log("Nope! Game Over.")
-		    		$("#messages").text("Nope! Game Over.")
-		    		speedTracker = 850;
-		    		$("#score")[0].innerText = 0;
-		    		$("#speed")[0].innerText = 1;
+		  			if (Number(score) - Number(wagerAmount) === 0) {
+		  				console.log("Game Over")
+		    			$("#messages").text("Game Over")
+		    			$("#startOver2").css("display", "flex")
+		    			$("#footer").css("display", "none")
+		    			$("#cardTable").replaceWith(startTable.clone());
+		    			return
+		  			}
+			  		console.log("Nope! Try again.")
+		    		$("#messages").text("Nope! Try again.")
+		    		$("#score")[0].innerText = Number(score) - Number(wagerAmount);
 		    		resetCards();
 	    		} else {
 		    		console.log("Correct!")
 		    		$("#messages").text("Correct!")
-		    		$("#score")[0].innerText++;
-	    			if ($("#score")[0].innerText % 3 === 0 && $("#score")[0].innerText !== 0) {
+		    		$("#score")[0].innerText = Number(score) + Number(wagerAmount);
+		    		if ($("#speed")[0].innerText >= 4) {
+	    				shuffleTimes+=2
+	    			}
+	    			if (round % 3 === 0) {
 	    				$("#speed")[0].innerText++;
-	    				speedTracker = speedTracker - 200
+	    				if (shuffleSpeed >= 250) {
+	    				shuffleSpeed = shuffleSpeed - 200
+	    				}
 	    			}
 	    			resetCards();
 	    		}
+	    		round++
 		  	} else {
 		  		clickToReset = true;
 		  	}
@@ -168,4 +187,52 @@ var resetCards = function() {
 	setTimeout(function() {$("#cardTable").replaceWith(startTable.clone());}, 2000);
 	setTimeout(function() {$("#messages").replaceWith(startMsgBoard.clone()); }, 2000);
 	clickToReset = false;
+	setTimeout(function() {$("#footer").css("display", "flex")}, 2000);
+	$("#wagerAmt").text($("#score")[0].innerText)
+	wagerAmount = $("#wagerAmt").text()
+	score = Number($("#score").text())
 }
+
+var restart = function() {
+	$("#shuffleBtn")[0].disabled = false;
+	$("#startOver2").css("display", "none")
+	clickedOnce = false;
+	console.log("clickedOnce is now false")
+	console.log(clickedOnce)
+	$("#cardTable").replaceWith(startTable.clone())
+	$("#messages").replaceWith(startMsgBoard.clone());
+	clickToReset = false;
+	$("#footer").css("display", "flex");
+	round = 1
+	shuffleTimes = 10;
+	shuffleSpeed = 850;
+	wagerAmount = 5
+	score = 5
+	$("#wagerAmt").text(5);
+	$("#score").text(5);
+	$("speed").text(1);
+}
+
+$("#restartBtn").click(function() {
+	restart();
+});
+
+$("#restartBtn2").click(function() {
+	restart();
+});
+
+$("#plus").click(function(){
+	score = Number($("#score").text())
+	if (wagerAmount < score) {
+		wagerAmount++
+	}
+	$("#wagerAmt").text(wagerAmount)
+});
+
+$("#minus").click(function(){
+	score = Number($("#score").text())
+	if (wagerAmount > 0) {
+		wagerAmount--
+	}
+	$("#wagerAmt").text(wagerAmount)
+});

@@ -76,9 +76,77 @@
     transform: rotateY(0);
 }
 
+#footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+#wager {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	margin: 15px 0;
+}
+
+#wager span {
+	display: flex;
+	align-items: center;
+}
+
+#wagerAmt {
+	margin: 0 20px;
+}
+
+#amount {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.amountBtn {
+	height: 3px;
+	width: 30px;
+	text-align: center;
+	line-height: 0.5em;
+	padding-bottom: 5px;
+}
+
 .shuffle {
 	display: flex;
 	justify-content: center;
+	margin: 0 25px;
+}
+
+#shuffleBtn {
+	width: 200px;
+	height: 50px;
+}
+
+#restartBtn {
+	width: 100px;
+	height: 50px;
+}
+
+#startOver {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+}
+
+#restartBtn2 {
+	width: 100px;
+	height: 50px;
+}
+
+#startOver2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
 }
 
 #infoSection {

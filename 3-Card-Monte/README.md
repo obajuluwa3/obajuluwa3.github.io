@@ -19,8 +19,8 @@ One-player game where user is dealt 3 cards. The cards are flipped over and then
 * User earns or loses the amount wagered before each turn
 * Once user is out of point, the game ends
 
-## Wireframes
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+## Initial Wireframe
+![alt text](https://obajuluwa3.github.io/3-Card-Monte/3-Card-Monte-wireframe.jpg "wireframe")
 
 ## Original Pseudocode
 - Put cards on the screen in random order
@@ -50,11 +50,13 @@ One-player game where user is dealt 3 cards. The cards are flipped over and then
 ## Project Planning
 Check out my Project 1 Trello Board [here](https://trello.com/b/guS21SVL).
 
-## Things I'd like to add in the future..
-* Add Theme music - I'd like to add some music that plays during gameplay. I could probably do this by linking in the sound file in the HTML
+## Possible further development..
+* Add Theme music - I'd like to add some music that plays during gameplay. I could probably do this by linking in the sound file in the HTML and triggering it in JavaScript
 * Refine Shuffling & flipping animation - I would have liked to make the shuffling and flipping animations look more natural by perhaps using keyframe animations in CSS
+* Create a mobile version of the game
 
 ### Inspirations & References
 - www.freepik.com
 - www.stackoverflow.com
 - www.css-tricks.com
+

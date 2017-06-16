@@ -2,8 +2,9 @@ var shuffleCount = 0;
 var shuffleTimer;
 var targetCard;
 var clicked;
-var startTable = $("#cardTable").clone();
 var startMsgBoard = $("#messages").clone();
+var startTable = $("#cardTable").clone();
+var startFooter = $("#footer").clone();
 var clickedOnce = false
 var clickToReset = false;
 var shuffleSpeed = 850;
@@ -33,7 +34,7 @@ var shuffle = function() {
 	}
 	if (shuffleCount === shuffleTimes) {
     	stopTime();
-    	$("#messages").text("Click one of the cards to find the Queen of Hearts!")
+    	$("#messages").text("Where is the Queen of Hearts?")
     	cards = document.querySelectorAll(".wholeCard");
     	console.log(targetCard);
     	clickedOnce = false;
@@ -49,9 +50,9 @@ var switchLeftCards = function() {
 	var card2 = $("#back2 .cardBack");
 	var front1 = $("#card1Wrapper .playingCard")
 	var front2 = $("#card2Wrapper .playingCard")
-	card1.animate({left: '205px'}, 200, function() {
+	card1.animate({left: '175px'}, 200, function() {
 	});
-	card2.animate({left: '-205px'}, 200, function(){
+	card2.animate({left: '-175px'}, 200, function(){
 		$("#back2").append(card1);
 		$("#card2Wrapper").append(front1);
 		$(card1).css("left", "0");
@@ -67,9 +68,9 @@ var switchRightCards = function() {
 	var card3 = $("#back3 .cardBack");
 	var front2 = $("#card2Wrapper .playingCard")
 	var front3 = $("#card3Wrapper .playingCard")
-	card2.animate({left: '205px'}, 200, function() {
+	card2.animate({left: '175px'}, 200, function() {
 	});
-	card3.animate({left: '-205px'}, 200, function() {
+	card3.animate({left: '-175px'}, 200, function() {
 		$("#back3").append(card2);
 		$("#card3Wrapper").append(front2);
 		$(card2).css("left", "0");
@@ -85,9 +86,9 @@ var switchEndCards = function() {
 	var card3 = $("#back3 .cardBack");
 	var front1 = $("#card1Wrapper .playingCard")
 	var front3 = $("#card3Wrapper .playingCard")
-	card1.animate({left: '405px'}, 200, function() {
+	card1.animate({left: '305px'}, 200, function() {
 	});
-	card3.animate({left: '-405px'}, 200, function() {
+	card3.animate({left: '-305px'}, 200, function() {
 		$("#back3").append(card1);
 		$("#card3Wrapper").append(front1);
 		$(card1).css("left", "0");
@@ -102,8 +103,9 @@ var stopTime = function() {
 	clearInterval(shuffleTimer);
 }
 
-$("#shuffleBtn").click(function(){
-	$("#footer").css("display", "none")
+$("body").on("click", "#shuffleBtn", function() {
+	// $("#footer").css("display", "none")
+	$("#footer").toggleClass('open');
     $(".cardBackWrapper").css("display", "block");
     $(".cardFrontWrapper").css("display", "none");
     shuffleTimer = setInterval(function(){shuffle()}, shuffleSpeed)
@@ -136,7 +138,7 @@ var clickListener = function(card) {
 		  		if (clicked.parent().parent().index() !== targetCard.parent().parent().index()) {
 		  			if (Number(score) - Number(wagerAmount) === 0) {
 		  				console.log("Game Over")
-		    			$("#messages").text("Game Over")
+		    			$("#messages").text("Wrong. Game Over. Give it another try!")
 		    			$("#startOver2").css("display", "flex")
 		    			$("#footer").css("display", "none")
 		    			$("#cardTable").replaceWith(startTable.clone());
@@ -187,7 +189,7 @@ var resetCards = function() {
 	setTimeout(function() {$("#cardTable").replaceWith(startTable.clone());}, 2000);
 	setTimeout(function() {$("#messages").replaceWith(startMsgBoard.clone()); }, 2000);
 	clickToReset = false;
-	setTimeout(function() {$("#footer").css("display", "flex")}, 2000);
+	setTimeout(function() {$("#footer").toggleClass('open');}, 2000);
 	$("#wagerAmt").text($("#score")[0].innerText)
 	wagerAmount = $("#wagerAmt").text()
 	score = Number($("#score").text())
@@ -199,10 +201,10 @@ var restart = function() {
 	clickedOnce = false;
 	console.log("clickedOnce is now false")
 	console.log(clickedOnce)
-	$("#cardTable").replaceWith(startTable.clone())
+	$("#cardTable").replaceWith(startTable.clone());
 	$("#messages").replaceWith(startMsgBoard.clone());
+	$("#footer").replaceWith(startFooter.clone());
 	clickToReset = false;
-	$("#footer").css("display", "flex");
 	round = 1
 	shuffleTimes = 10;
 	shuffleSpeed = 850;
@@ -213,11 +215,11 @@ var restart = function() {
 	$("speed").text(1);
 }
 
-$("#restartBtn").click(function() {
+$("body").on("click", "#restartBtn", function() {
 	restart();
 });
 
-$("#restartBtn2").click(function() {
+$("body").on("click", "#restartBtn2", function() {
 	restart();
 });
 
@@ -229,10 +231,22 @@ $("#plus").click(function(){
 	$("#wagerAmt").text(wagerAmount)
 });
 
-$("#minus").click(function(){
+$("body").on("click", "#minus", function(){
 	score = Number($("#score").text())
-	if (wagerAmount > 0) {
+	if (wagerAmount > 1) {
 		wagerAmount--
 	}
 	$("#wagerAmt").text(wagerAmount)
+});
+
+$("body").on("click", "#playNow", function(){
+	setTimeout(function() {$("#introScreen").fadeOut('slow')}, 200);
+	setTimeout(function() {$("#instructions").fadeIn('slow')}, 800);
+	setTimeout(function() {$("#instructions").fadeOut('slow')}, 29200);
+	setTimeout(function() {$("#gameContainer").fadeIn('fast')}, 30000);
+});
+
+$("body").on("click", "#skip", function(){
+	setTimeout(function() {$("#instructions").fadeOut('slow')}, 200);
+	setTimeout(function() {$("#gameContainer").fadeIn('fast')}, 800);
 });

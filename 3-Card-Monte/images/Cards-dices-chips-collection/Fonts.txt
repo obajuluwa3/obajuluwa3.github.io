@@ -1,0 +1,14 @@
+Fonts used in this design;
+
+Font: Arcon, 
+Author: Zarthwork, 
+Url: http://www.fontsquirrel.com/fonts/arcon; 
+
+Font: Orbitron, 
+Author: The League of Moveable Type, 
+Url: http://www.fontsquirrel.com/fonts/orbitron; 
+
+Font: Life Savers, 
+Author: Impallari Type, 
+Url: https://www.fontsquirrel.com/fonts/life-savers; 
+

@@ -1,0 +1,67 @@
+::selection { background: #8250a0; }
+::-moz-selection { background: #8250a0; }
+::-webkit-selection { background: #8250a0; }
+
+a,
+
+.blue,
+.logo span,
+.affix-logo span{
+    color:#8250a0;
+}
+.nav li.current a,.nav li.current a:hover,  .nav li a:hover,.nav li a:focus{
+		background: transparent;
+		color:#8250a0;
+	}
+	
+/*ul.nav ul.dropdown-menu{
+		border-top:2px solid #8250a0;
+	}	
+*/
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+color:#dedde3;
+background:#3a3a3a;
+border-top:1px solid transparent;
+}
+.label-info {
+background-color: #8250a0;
+}
+.progress-bar{
+    background-color:#8250a0;
+}
+.color-background {
+    background-color: #8250a0;
+}
+.service-box:hover .icon-box i{
+    border:3px solid #8250a0 ;
+    background:#8250a0;
+  
+}
+.btn-home, .btn-home:hover,.btn-buy, .btn-project {
+    font-size:13px;
+    font-weight:600;
+    margin:20px 10px;
+    padding:10px 20px;
+    background-color: #8250a0;
+    border: 1px solid #8250a0;
+}
+
+.send-btn {
+    background-color: #8250a0 !important;
+}
+.footer i{
+    color:#8250a0;
+}
+
+@media only screen and (max-width: 970px) {
+   .nav li.current a:hover, .nav li a:focus,.nav li a:hover{
+        color:#8250a0;
+        background:#8250a0;
+		
+}
+   .dark:hover{
+       color:#8250a0;
+	  
+   }
+   
+}

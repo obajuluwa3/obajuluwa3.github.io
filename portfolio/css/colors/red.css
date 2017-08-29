@@ -1,0 +1,66 @@
+::selection { background: #f56450; }
+::-moz-selection { background: #f56450; }
+::-webkit-selection { background: #f56450; }
+
+a,
+
+.blue,
+.logo span,
+.affix-logo span{
+    color:#f56450;
+}
+.nav li.current a,.nav li.current a:hover,  .nav li a:hover,.nav li a:focus{
+		background: transparent;
+		color:#f56450;
+	}
+	
+/*ul.nav ul.dropdown-menu{
+		border-top:2px solid #f56450;
+	}	
+*/
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+color:#dedde3;
+background:#3a3a3a;
+border-top:1px solid transparent;
+}
+.label-info {
+background-color: #f56450;
+}
+.progress-bar{
+    background-color:#f56450;
+}
+.color-background {
+    background-color: #f56450;
+}
+.service-box:hover .icon-box i{
+    border:3px solid #f56450 ;
+    background:#f56450;
+  
+}
+.btn-home, .btn-home:hover,.btn-buy, .btn-project {
+    font-size:13px;
+    font-weight:600;
+    margin:20px 10px;
+    padding:10px 20px;
+    background-color: #f56450;
+    border: 1px solid #f56450;
+}
+
+.send-btn {
+    background-color: #f56450 !important;
+}
+.footer i{
+    color:#f56450;
+}
+@media only screen and (max-width: 970px) {
+   .nav li.current a:hover, .nav li a:focus,.nav li a:hover{
+        color:#f56450;
+        background:#f56450;
+		
+}
+   .dark:hover{
+       color:#f56450;
+	  
+   }
+   
+}

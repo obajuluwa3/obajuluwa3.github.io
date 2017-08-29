@@ -1,0 +1,117 @@
+﻿/* Styles Switcher
+====================================================================== */
+
+	#style-switcher h3 {
+		color: #848688;
+		font-size: 13px;
+		text-align: center;
+		/*margin: 5px 0 -5px 1px;*/
+	}
+	
+	#style-switcher {
+		background-color: #fff;
+		width: 195px;
+		position:fixed;
+		top: 96px;
+		z-index: 999;
+		border-radius: 0 0 3px 0;
+		left: -196px;
+		border: 1px solid #e4e4e4;
+		border-left: 0;
+		/*border-top: 0;*/
+		box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08);
+	}
+	
+	#style-switcher div {
+		padding: 2px 18px 10px 18px;
+	}
+	
+	#style-switcher h2 {
+		background-color: #fff;
+		color: #848688;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 5px 0 5px 0px;
+		margin: 10px 0;
+		/*border-top:1px solid #eee;	*/	
+		color:#666;
+        text-align: center;
+       
+		
+	}
+	
+	#style-switcher h2 a {
+		/*background: url("../images/switcher.gif") no-repeat 10px center transparent;*/
+		background-color: #fff;
+		display: block;
+		height: 44px;
+		position: absolute;
+		right: -44px;
+		/*text-indent: -9999px;*/
+		top: 20px;
+		width: 44px;
+		border-radius: 0 2px 2px 0;
+		border: 1px solid #e4e4e4;
+		border-left:0px solid #e4e4e4;
+		box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.08);
+		color:#000;
+
+
+	}
+	#style-switcher h2 a i{
+	
+	padding:10px 10px;
+	font-size:20px;
+	}
+	
+	.colors {
+		list-style:none;
+		margin: 0 0px 10px 0;
+		overflow: hidden;
+	}
+	
+	.colors li {
+		float:left;
+		margin: 4px 2px 0 2px;
+	}
+	
+	.colors li a {
+		display: block;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		border-radius: 2px;
+	} 
+	
+	.layout-style select,
+	.header-style select {
+		width: 164px;
+		padding: 5px;
+		color: #848688;
+		cursor: pointer;
+		border-radius: 2px;
+		font-size: 13px;
+		margin: 2px 0 10px 2px;
+	}
+	
+	.layout-style,
+	.header-style { padding: 0 !important; }
+	
+	.grayblue { background: #5f8cb4; }
+	.red      { background: #f56450; }
+	.green    { background: #1abc9c; }
+	.blue     { background: #50d2f5; }
+	.beige    { background: #d2be82; } 
+	.cyan     { background: #28cdbe; }
+	.pink     { background: #cd2d78; }	
+	.olive    { background: #9bbe55; }	
+	.purple   { background: #8250a0; }
+	.marsala  { background: #955251;}
+	
+	
+
+	
+	
+	
+	@media only screen and (max-width: 1023px) { #style-switcher { display: none; } }
+	   

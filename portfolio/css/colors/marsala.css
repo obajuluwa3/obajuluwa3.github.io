@@ -1,0 +1,67 @@
+::selection { background: #955251; }
+::-moz-selection { background: #955251; }
+::-webkit-selection { background: #955251; }
+
+a,
+
+.blue,
+.logo span,
+.affix-logo span{
+    color:#955251;
+}
+.nav li.current a,.nav li.current a:hover,  .nav li a:hover,.nav li a:focus{
+		background: transparent;
+		color:#955251;
+	}
+	
+/*ul.nav ul.dropdown-menu{
+		border-top:2px solid #955251;
+	}	
+*/
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+color:#dedde3;
+background:#3a3a3a;
+border-top:1px solid transparent;
+}
+.label-info {
+background-color: #955251;
+}
+.progress-bar{
+    background-color:#955251;
+}
+.color-background {
+    background-color: #955251;
+}
+.service-box:hover .icon-box i{
+    border:3px solid #955251 ;
+    background:#955251;
+  
+}
+.btn-home, .btn-home:hover,.btn-buy, .btn-project {
+    font-size:13px;
+    font-weight:600;
+    margin:20px 10px;
+    padding:10px 20px;
+    background-color: #955251;
+    border: 1px solid #955251;
+}
+
+.send-btn {
+    background-color: #955251 !important;
+}
+.footer i{
+    color:#955251;
+}
+
+@media only screen and (max-width: 970px) {
+   .nav li.current a:hover, .nav li a:focus,.nav li a:hover{
+        color:#955251;
+        background:#955251;
+		
+}
+   .dark:hover{
+       color:#955251;
+	  
+   }
+   
+}

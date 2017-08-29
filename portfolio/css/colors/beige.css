@@ -1,0 +1,66 @@
+::selection { background: #d2be82; }
+::-moz-selection { background: #d2be82; }
+::-webkit-selection { background: #d2be82; }
+
+a,
+
+.blue,
+.logo span,
+.affix-logo span{
+    color:#d2be82;
+}
+.nav li.current a,.nav li.current a:hover,  .nav li a:hover,.nav li a:focus{
+		background: transparent;
+		color:#d2be82;
+	}
+	
+/*ul.nav ul.dropdown-menu{
+		border-top:2px solid #d2be82;
+	}	
+*/
+.dropdown-menu li a:hover, .dropdown-menu li a:focus{
+color:#dedde3;
+background:#3a3a3a;
+border-top:1px solid transparent;
+}
+.label-info {
+background-color: #d2be82;
+}
+.progress-bar{
+    background-color:#d2be82;
+}
+.color-background {
+    background-color: #d2be82;
+}
+.service-box:hover .icon-box i{
+    border:3px solid #d2be82 ;
+    background:#d2be82;
+  
+}
+.btn-home, .btn-home:hover,.btn-buy, .btn-project {
+    font-size:13px;
+    font-weight:600;
+    margin:20px 10px;
+    padding:10px 20px;
+    background-color: #d2be82;
+    border: 1px solid #d2be82;
+}
+
+.send-btn {
+    background-color: #d2be82 !important;
+}
+.footer i{
+    color:#d2be82;
+}
+@media only screen and (max-width: 970px) {
+   .nav li.current a:hover, .nav li a:focus,.nav li a:hover{
+        color:#d2be82;
+        background:#d2be82;
+		
+}
+   .dark:hover{
+       color:#d2be82;
+	  
+   }
+   
+}

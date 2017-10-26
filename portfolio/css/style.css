@@ -199,7 +199,7 @@ a.affix-logo{
 	
        z-index:1200;
 	}	
-.affix .nav li a{
+.affix .navi li a{
     color: #333333;
 	
 }
@@ -298,7 +298,7 @@ a.affix-logo{
 		margin-right:40px;
 	}
 
-	.nav li{
+	.navi li{
 		/*display: inline-block;*/
 		float:left;
 		margin:0;
@@ -307,7 +307,7 @@ a.affix-logo{
 		height: 100%;
 	}
 
-	.nav li a{
+	.navi li a{
 		display: block;
 		height: 100%;
 		
@@ -335,7 +335,7 @@ a.affix-logo{
 
 	
 
-.nav li.current a,.nav li.current a:hover,  .nav li a:hover, .nav li a:focus{
+.navi li.current a,.navi li.current a:hover,  .navi li a:hover, .navi li a:focus{
 		color:#393939;
 	}	
 
@@ -888,21 +888,32 @@ font-size:25px;
 	}
 }
 
+@media only screen and (max-width: 991px){
+
+	.img-space {
+		width: 300px;
+	}
+
+	.disappear {
+		display: none;
+	}
+}
+
 /* MAX 970px */
 
 @media only screen and (max-width: 970px){
 
-h1{
-    font-size:30px;
-    line-height:35px;
+	h1{
+	    font-size:30px;
+	    line-height:35px;
     }
-#navigation a.mini-nav-button{
+	#navigation a.mini-nav-button{
 		display: block;
 		
 	}
 
 
-#navigation .nav-menu{
+	#navigation .nav-menu{
 		display:none;
 		height: auto;
 		top:-5px;
@@ -917,13 +928,13 @@ h1{
         /*z-index:1050;*/
 	}
 
-	#navigation ul.nav li{
+	#navigation ul.navi li{
 		display:inline-block;
 		height:auto;
 		width:100%;
 	}
 
-	#navigation ul.nav li a{
+	#navigation ul.navi li a{
 		display:block;
 		height: auto;
 		width:100%;	
@@ -938,23 +949,23 @@ h1{
 	
 	
 	
-	#navigation ul.nav li a:hover,
-	#navigation ul.nav li.active a{
+	#navigation ul.navi li a:hover,
+	#navigation ul.navi li.active a{
 		color:#fff;
 	}
 
-    #navigation ul.nav ul.dropdown-menu {
+    #navigation ul.navi ul.dropdown-menu {
         width: 100%;
         position: relative;
         margin: 0;
         padding: 10px 10px;
         box-shadow: 0px 1px 1px rgba(0,0,0, 0.1);
     }
-	#navigation ul.nav ul.dropdown-menu li{
+	#navigation ul.navi ul.dropdown-menu li{
 		width:100%;
 	}
 	
-	#navigation ul.nav ul.dropdown-menu li a{
+	#navigation ul.navi ul.dropdown-menu li a{
 		line-height: 40px;
 	}
 
@@ -1394,4 +1405,8 @@ margin:0px 0px;
 .fixNav {
 	pointer-events: auto !important;
 	cursor: pointer; 
+}
+
+.no-dots {
+	list-style-type: none;
 }

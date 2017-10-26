@@ -9,12 +9,12 @@ a,
 .affix-logo span{
     color:#25b5f1;
 }
-.nav li.current a,.nav li.current a:hover,  .nav li a:hover,.nav li a:focus{
+.navi li.current a,.navi li.current a:hover,  .navi li a:hover,.navi li a:focus{
 		background: transparent;
 		color:#25b5f1;
 	}
 	
-/*ul.nav ul.dropdown-menu{
+/*ul.navi ul.dropdown-menu{
 		border-top:2px solid #25b5f1;
 	}	
 */
@@ -53,7 +53,7 @@ background-color: #25b5f1;
     color:#25b5f1;
 }
 @media only screen and (max-width: 970px) {
-   .nav li.current a:hover, .nav li a:focus,.nav li a:hover{
+   .navi li.current a:hover, .navi li a:focus,.navi li a:hover{
         color:#25b5f1;
         background:#25b5f1;
 		

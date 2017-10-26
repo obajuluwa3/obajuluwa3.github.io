@@ -37,10 +37,16 @@
                         <a class="mini-nav-button dark"><i class="fa fa-bars"></i></a>
                     <!-- Navigation Menu -->
                     <div class="nav-menu">
-                        <ul class="nav">
-                            <li class="current"><a class="scroll" href="#home">Home</a></li>
-                            <li><a href="#about-me">About Me</a></li>
-                            <li><a href="#portfolio">Portfolio</a></li>
+                        <ul class="navi no-dots">
+                            <li class="current">
+                                <a class="scroll" href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about-me" class="nav-link active">About Me</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">Portfolio</a>
+                            </li>
                         </ul>
                     </div><!-- End Navigation Menu -->
                 </div><!-- End Navigation Inner -->
@@ -58,12 +64,12 @@
                         Hi, I'm Odunayo
                         <span>Full-stack Web Developer</span>
                     </h1>
-                    <a href="#about" class="btn btn-buy scroll"> <span class="">About Me</span></a>
-                    <a href="resume.pdf" target="_blank" class="btn btn-buy "> <span class="">Resume</span></a>
+                    <a href="#about-me" class="btn btn-buy scroll disappear"> <span class="">About Me</span></a>
+                    <a href="resume.pdf" target="_blank" class="btn btn-buy disappear"> <span class="">Resume</span></a>
                 </div>
 
-                <div id="about">
-                </div>
+               <!--  <div id="about">
+                </div> -->
             </div>
         </div>
 
@@ -76,9 +82,9 @@
                 <div class="row about">
                     <div class="col-xs-12 col-md-4  text-center" data-animated="bounceIn">
 
-                        <img src="./images/odun-crop.jpg" alt=" " class="center-block img-circle img-thumbnail img-responsive" />
-                        <div class="img-desc-about">
-                            <h2 class="name">
+                        <img src="./images/odun-crop.jpg" alt=" " class="center-block img-circle img-thumbnail img-responsive img-space" />
+                        <div class="img-desc-about shift-down">
+                            <h2 class="name disappear">
                                 Odunayo Obajuluwa<br />(Ayo)
                                 <span>Full-stack Web Developer</span>
                             </h2>
@@ -103,17 +109,6 @@
             </div>
             <div class="container">
                 <div class="row personal-info">
-                    <div class="col-xs-12 col-md-6" data-animated="bounceIn">
-                        <div class="personal-title">
-                            <h3>Personal information</h3>
-                        </div>
-                        <div class="personal-description">
-                            <p><strong>Skills: </strong> Front-end/back-end Wed Development, Graphic Design</p>
-                            <p><strong>Hobbies: </strong>Music/Drums, Soccer, Table Tennis </p>
-                            <p><strong>Current Location: </strong>Chicago, IL</p>
-                            <p><strong>Email: </strong>obajulwa3@gmail.com </p>
-                        </div>
-                    </div>
                     <div class="col-xs-12 col-md-6 skill-bars" data-animated="bounceIn">
                         <div class="personal-title">
                             <h3>Programming Skills</h3>
@@ -174,6 +169,8 @@
                             <span class="progress-type">PostgreSQL</span>
                             <span class="progress-completed">70%</span>
                         </div>
+                    </div>
+                    <div class="col-xs-12 col-md-6 skill-bars" data-animated="bounceIn">
                         <div class="personal-title">
                             <h3>Graphic Design Skills</h3>
                         </div>
@@ -198,6 +195,19 @@
                             <span class="progress-type">Adobe Illustrator</span>
                             <span class="progress-completed">80%</span>
                         </div>
+
+
+                        <div class="col-xs-12" data-animated="bounceIn">
+                            <div class="personal-title">
+                            </div>
+                            <div class="personal-description">
+                                <p><strong>Other Skills: </strong>Agile, Graphic Design</p>
+                                <p><strong>Hobbies: </strong>Music/Drums, Soccer, Table Tennis </p>
+                                <p><strong>Current Location: </strong>Chicago, IL</p>
+                                <p><strong>Email: </strong>obajulwa3@gmail.com </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

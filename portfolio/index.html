@@ -2,9 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <!--[if IE]>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
-    <![endif]-->
     <meta name="viewport" content="width=device-width, maximum-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -17,19 +14,7 @@
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
     <link href="css/switcher.css" rel="stylesheet" />
-    <link id="colors" href="css/colors/blue.css" rel="stylesheet" /> <!--!Default Line  Color Style-->
-    <!-- Copy  And Rewrite Color Style To Default Line
-    <link id="colors" href="css/colors/purple.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/cyan.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/red.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/grayblue.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/beige.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/green.css" rel="stylesheet"/>
-    <link id="colors" href="css/colors/marsala.css" rel="stylesheet"/>
-    -->
-    <!--[if lt IE 9]>
-        <script src="../../../html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link id="colors" href="css/colors/blue.css" rel="stylesheet" />
 </head>
 
 <body id="document">
@@ -44,19 +29,18 @@
                 <div class="">
                     <!-- Site Logo -->
                     <div class="site-logo">
-                        <a href="#home" id="logo" class="logo scrol">
+                        <a href="#home" id="logo" class="logo scroll">
                             <!-- Your Logo -->
                             ODUN.io<span>.</span>
                         </a>
                     </div><!-- End Site Logo -->
-                    <a class="mini-nav-button dark"><i class="fa fa-bars"></i></a>
+                        <a class="mini-nav-button dark"><i class="fa fa-bars"></i></a>
                     <!-- Navigation Menu -->
                     <div class="nav-menu">
                         <ul class="nav">
-                            <li class="current"><a href="#home">Home</a></li>
-                            <li><a href="#about">About Me</a></li>
+                            <li class="current"><a class="scroll" href="#home">Home</a></li>
+                            <li><a href="#about-me">About Me</a></li>
                             <li><a href="#portfolio">Portfolio</a></li>
-
                         </ul>
                     </div><!-- End Navigation Menu -->
                 </div><!-- End Navigation Inner -->
@@ -66,7 +50,7 @@
     </div>
     <!-- END NAVIGATION -->
     <!--HOME SECTION-->
-    <section id="home">
+    <section id="home" name="home">
         <div class="overlay">
             <div class="background">
                 <div class="home-wrap text-center " data-animated="bounceIn">
@@ -74,7 +58,7 @@
                         Hi, I'm Odunayo
                         <span>Full-stack Web Developer</span>
                     </h1>
-                    <a href="#about" class="btn btn-home  scrol "> <span class="">About Me</span></a>
+                    <a href="#about" class="btn btn-buy scroll"> <span class="">About Me</span></a>
                     <a href="resume.pdf" target="_blank" class="btn btn-buy "> <span class="">Resume</span></a>
                 </div>
 
@@ -86,13 +70,13 @@
     </section>
     <!--END HOME SECTION-->
     <!-- SECTION ABOUT ME -->
-    <section id="about-me">
+    <section id="about-me" name="about-me">
         <div class="section-wrap">
             <div class="container">
                 <div class="row about">
                     <div class="col-xs-12 col-md-4  text-center" data-animated="bounceIn">
 
-                        <img src="./images/odun-crop.jpg" alt=" " class="center-blok img-circle img-thumbnail img-responsive" />
+                        <img src="./images/odun-crop.jpg" alt=" " class="center-block img-circle img-thumbnail img-responsive" />
                         <div class="img-desc-about">
                             <h2 class="name">
                                 Odunayo Obajuluwa<br />(Ayo)
@@ -305,6 +289,7 @@
     <script src="js/switcher.js"></script>
     <script src="js/imagelightbox.js"></script>
     <script src="js/custom.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
     <script>
 
 
